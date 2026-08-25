@@ -1,2 +1,3 @@
-line one
-line two
+COMPLETELY DIFFERENT CONTENT
+another new line
+third new line
