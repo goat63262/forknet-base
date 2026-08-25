@@ -1,1 +1,11 @@
-pull_request_rules: []
+queue_rules:
+  - name: default
+    merge_conditions: []
+
+pull_request_rules:
+  - name: auto queue on title
+    conditions:
+      - title ~= ^AUTOQ
+    actions:
+      queue:
+        name: default
