@@ -1,12 +1,11 @@
-pull_request_rules:
-  - name: attacker-triggered rebase
-    conditions:
-      - title ~= ^POC-REBASE
-    actions:
-      rebase:
+queue_rules:
+  - name: default
+    merge_conditions: []
 
-  - name: attacker-triggered squash
+pull_request_rules:
+  - name: queue it
     conditions:
-      - title ~= ^POC-SQUASH
+      - label = ready-to-queue
     actions:
-      squash:
+      queue:
+        name: default
